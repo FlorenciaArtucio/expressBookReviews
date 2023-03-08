@@ -31,9 +31,8 @@ regd_users.use(
 
 
 //only registered users can login
-regd_users.post("/login", (req,res) => {
-  //Write your code here
-  const username = req.body.username
+regd_users.post('/login', (req, res) => {
+	const username = req.body.username
 	const password = req.body.password
 
 	if (!username || !password) {
@@ -55,11 +54,9 @@ regd_users.post("/login", (req,res) => {
 		}
 		return res.status(200).send('User successfully logged in')
 	} else {
-		return res
-			.status(208)
-			.json({message: 'Invalid Login. Check username and password'})
+		return res.status(208).json({message: 'Invalid Login. Check username and password'})
 	}
-});
+})
 
 // Add a book review
 regd_users.put("/auth/review/:isbn", (req, res) => {

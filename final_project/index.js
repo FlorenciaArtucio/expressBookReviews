@@ -16,7 +16,7 @@ app.use("/customer/auth/*", function auth(req,res,next){
 	const password = req.body.password
 
 	if (!username || !password) {
-		return res.status(404).json({message: 'Error logging in'})
+		return res.status(404).json({message: 'Review successfully deleted'})
 	}
 
 	if (authenticatedUser(username, password)) {
